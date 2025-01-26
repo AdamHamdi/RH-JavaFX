@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -30,7 +31,7 @@ public class LoginController {
         String password = passwordField.getText();
 
         if (isLoginSuccessful(email, password)) {
-            redirectToEmployeView();
+            loadHomePage();
         } else {
             System.out.println("Échec de la connexion : Email ou mot de passe incorrect.");
         }
@@ -43,18 +44,25 @@ public class LoginController {
     }
 
     // Redirection vers la page "employe-view.fxml"
-    private void redirectToEmployeView() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/employe-view.fxml"));
-            Parent employeView = loader.load();
 
-            // Obtenir la fenêtre actuelle depuis le bouton
-            Stage stage = (Stage) loginButton.getScene().getWindow();
-            stage.setScene(new Scene(employeView));
-            stage.setTitle("Liste des Employés");
+    private void loadHomePage() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/home-view.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) emailField.getScene().getWindow(); // Récupère la fenêtre actuelle
+            stage.setScene(new Scene(root));
+            stage.setTitle("Page d'accueil");
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Erreur lors du chargement de employe-view.fxml");
+            showAlert("Erreur", "Impossible de charger la page d'accueil.");
         }
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }
