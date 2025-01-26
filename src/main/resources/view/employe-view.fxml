@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.EmployeController">
+
+    <!-- Search Field -->
+    <TextField fx:id="searchField" promptText="Rechercher un employé" />
+
+    <!-- Add Employee Button -->
+    <Button fx:id="addButton" text="Ajouter un employé" onAction="#addEmploye" />
+
+    <!-- TableView to display employees -->
+    <TableView fx:id="employeTable" prefHeight="600" prefWidth="1000">
+        <columns>
+            <!-- Column for Employee ID -->
+            <TableColumn fx:id="id" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Column for Employee First Name -->
+            <TableColumn fx:id="firstName" text="Nom">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="lastName" text="Prénom">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastName" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="email" text="Email">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="department" text="Département">
+                <cellValueFactory>
+                    <PropertyValueFactory property="department" />
+                </cellValueFactory>
+            </TableColumn>
+
+
+            <!-- Column for Employee Position -->
+            <TableColumn fx:id="positionColumn" text="Poste">
+                <cellValueFactory>
+                    <PropertyValueFactory property="position" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>
