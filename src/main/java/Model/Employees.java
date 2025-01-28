@@ -61,4 +61,16 @@ public class Employees {
 
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
+
+    @Override
+    public String toString() {
+        return "Employees{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", department='" + department + '\'' +
+                ", position='" + position + '\'' +
+                '}';
+    }
 }

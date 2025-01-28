@@ -30,7 +30,9 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="31ceab51-de4c-455c-b205-1dc1ab02d246" object-ref="schemas/ressources_humaines/tables/employees" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="9425cd33-8239-43e2-9c07-d39cc0da04b7" />
@@ -43,7 +45,9 @@
         <condition column="employee_id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
-    <filter-actions connection-id="31ceab51-de4c-455c-b205-1dc1ab02d246" dataset="ressources_humaines.employees" active-filter-id="" />
+    <filter-actions connection-id="31ceab51-de4c-455c-b205-1dc1ab02d246" dataset="ressources_humaines.employees" active-filter-id="2fee3968-523d-4ca0-84ad-55b8905d894c">
+      <filter id="2fee3968-523d-4ca0-84ad-55b8905d894c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />

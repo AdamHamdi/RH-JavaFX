@@ -4,6 +4,8 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import com.mysql.cj.result.ValueFactory?>
+<?import javafx.util.Callback?>
 <VBox xmlns="http://javafx.com/javafx/11.0.1"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="controller.EmployeController">
@@ -18,43 +20,15 @@
     <TableView fx:id="employeTable" prefHeight="600" prefWidth="1000">
         <columns>
             <!-- Column for Employee ID -->
-            <TableColumn fx:id="id" text="ID">
-                <cellValueFactory>
-                    <PropertyValueFactory property="id" />
-                </cellValueFactory>
-            </TableColumn>
-
-            <!-- Column for Employee First Name -->
-            <TableColumn fx:id="firstName" text="Nom">
-                <cellValueFactory>
-                    <PropertyValueFactory property="firstName" />
-                </cellValueFactory>
-            </TableColumn>
-
-            <TableColumn fx:id="lastName" text="Prénom">
-                <cellValueFactory>
-                    <PropertyValueFactory property="lastName" />
-                </cellValueFactory>
-            </TableColumn>
-
-            <TableColumn fx:id="email" text="Email">
-                <cellValueFactory>
-                    <PropertyValueFactory property="email" />
-                </cellValueFactory>
-            </TableColumn>
-            <TableColumn fx:id="department" text="Département">
-                <cellValueFactory>
-                    <PropertyValueFactory property="department" />
-                </cellValueFactory>
-            </TableColumn>
+            <TableColumn fx:id="id" text="ID" />
+            <TableColumn fx:id="firstName" text="Nom" />
+            <TableColumn fx:id="lastName" text="Prénom" />
+            <TableColumn fx:id="email" text="Email" />
+            <TableColumn fx:id="department" text="Département" />
+            <TableColumn fx:id="positionColumn" text="Poste" />
+            <TableColumn fx:id="actionsColumn" text="Actions" />
 
 
-            <!-- Column for Employee Position -->
-            <TableColumn fx:id="positionColumn" text="Poste">
-                <cellValueFactory>
-                    <PropertyValueFactory property="position" />
-                </cellValueFactory>
-            </TableColumn>
         </columns>
     </TableView>
 </VBox>
