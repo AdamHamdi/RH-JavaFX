@@ -14,7 +14,7 @@
     <TextField fx:id="searchField" promptText="Rechercher un employé" />
 
     <!-- Add Employee Button -->
-    <Button fx:id="addButton" text="Ajouter un employé" onAction="#addEmploye" />
+    <Button fx:id="addButton" text="Ajouter un nouveau employé" onAction="#addEmploye" />
 
     <!-- TableView to display employees -->
     <TableView fx:id="employeTable" prefHeight="600" prefWidth="1000">
@@ -25,8 +25,12 @@
             <TableColumn fx:id="lastName" text="Prénom" />
             <TableColumn fx:id="email" text="Email" />
             <TableColumn fx:id="department" text="Département" />
-            <TableColumn fx:id="positionColumn" text="Poste" />
-            <TableColumn fx:id="actionsColumn" text="Actions" />
+            <TableColumn fx:id="position" text="Position" />
+            <TableColumn fx:id="statusColumn" text="Status" />
+            <TableColumn fx:id="hireDate" text="Date d'embauche" />
+            <TableColumn fx:id="address" text="Adresse" />
+            <TableColumn fx:id="phone" text="Téléhone" />
+            <TableColumn fx:id="actions" text="Actions" />
 
 
         </columns>

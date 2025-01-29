@@ -65,6 +65,7 @@ public class HomeViewController {
 
 
     @FXML
+
     public void goToEmployeView(javafx.event.ActionEvent actionEvent) {
         try {
             // Charger le fichier FXML de l'interface employe-view.fxml
@@ -72,7 +73,7 @@ public class HomeViewController {
             Parent employeView = loader.load();
 
             // Créer une nouvelle scène pour afficher employe-view.fxml
-            Scene employeScene = new Scene(employeView);
+            Scene employeScene = new Scene(employeView, 1300, 700);
 
             // Obtenir la scène actuelle et la remplacer par la nouvelle
             Stage stage = (Stage) gestionEmployesButton.getScene().getWindow();
@@ -82,6 +83,7 @@ public class HomeViewController {
             e.printStackTrace();
         }
     }
+
 
 
 }
